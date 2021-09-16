@@ -99,6 +99,8 @@ document.addEventListener('click', () => {
   if(!gameover) {
     if (!start) {
       start = true;
+      pipes.splice(0, pipes.length);
+      pipes.push(new Pipe(cnvs, ctx));
     }
     if (birb.velocity > 0) {
       birb.velocity = 0;
@@ -119,6 +121,11 @@ document.addEventListener('click', () => {
 
 document.addEventListener('keydown', (e) => {
   if (!gameover) {
+    if (!start) {
+      start = true;
+      pipes.splice(0, pipes.length);
+      pipes.push(new Pipe(cnvs, ctx));
+    }
     if (e.key === ' ') {
       if (birb.velocity > 0) {
         birb.velocity = 0;
