@@ -9,7 +9,7 @@ export default class Pipe {
     this.width = 150;
     this.x = this.canvas.width;
     this.gap = 300;
-    this.gapY = Math.floor(Math.random() * (this.canvas.height - this.gap - this.gap / 2)) + this.gap / 2;
+    this.gapY = Math.floor(Math.random() * (this.canvas.height - this.gap - this.gap / 2));
     this.speed = 3;
     this.color = '#1e1';
   }
